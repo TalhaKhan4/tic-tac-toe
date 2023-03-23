@@ -33,7 +33,7 @@ body {
 }
 .bottom {
   /* background-color: #fff; */
-  height: 24vh;
+/*   height: 24vh; */
   display: flex;
   justify-content: center;
   align-items: center;
