@@ -1,0 +1,101 @@
+/* font --> Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+/* The below code contains the width and height of top center and bottom, but we will change it using media querries for mobile devices */
+.top {
+  /* background-color: x#fff; */
+  height: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+/* The bold class and show-hide id is the styling for the paragraph inside the top div which displays the message to users about whoose move it is or who won */
+.bold {
+  font-weight: 800;
+}
+#show-hide {
+  visibility: hidden;
+}
+.bottom {
+  /* background-color: #fff; */
+  height: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* The below score is the div inside the bottom div which holds all the scores */
+.score {
+  width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 401px) {
+  .score {
+    font-size: 17px;
+  }
+}
+.center {
+  height: 52vh;
+}
+/* Designing the game layout using grid */
+.game {
+  /* the height is the 100% of the parent which is the center in this case */
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  width: 300px;
+  max-height: 300px;
+  /* to center the game layout in its parent div */
+  margin: auto;
+}
+.items {
+  border: 1.5px solid #fff;
+  position: relative;
+}
+#item1,
+#item4,
+#item7 {
+  border-left: none;
+}
+#item3,
+#item6,
+#item9 {
+  border-right: none;
+}
+#item1,
+#item2,
+#item3 {
+  border-top: none;
+}
+#item7,
+#item8,
+#item9 {
+  border-bottom: none;
+}
+.cross-circle {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+}
