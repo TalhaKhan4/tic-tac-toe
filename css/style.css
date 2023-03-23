@@ -55,6 +55,7 @@ body {
 }
 .center {
   height: 52vh;
+  border:2px solid red;
 }
 /* Designing the game layout using grid */
 .game {
