@@ -33,10 +33,15 @@ body {
 }
 .bottom {
   /* background-color: #fff; */
-/*   height: 24vh; */
+  height: 24vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .bottom {
+    height: auto;
+  }
 }
 /* The below score is the div inside the bottom div which holds all the scores */
 .score {
@@ -54,8 +59,10 @@ body {
   }
 }
 .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 52vh;
-  border:2px solid red;
 }
 /* Designing the game layout using grid */
 .game {
